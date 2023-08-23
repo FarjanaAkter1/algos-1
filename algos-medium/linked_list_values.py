@@ -11,7 +11,22 @@ class Node:
     self.next = None
 
 def linked_list_values(head):
-  pass # TODO:
+  values =[]
+  #create a variable for tracking where i am in the ll
+  current  = head
+  #iterate thru the entire list 
+  while (current is not None ):
+
+  #extract value and place it into my list 
+    values.append(current.val)
+  #move onto next node
+    current =current.next
+  #return extracted values.
+  return values 
+##.............................recursive model......................................
+
+
+
 
 
 # TEST CASES
@@ -24,17 +39,17 @@ d = Node("d")
 a.next = b
 b.next = c
 c.next = d
-linked_list_values(a) # -> [ 'a', 'b', 'c', 'd' ]
+print (linked_list_values(a) )# -> [ 'a', 'b', 'c', 'd' ]
 
-# 2.
-# x = Node("x")
-# y = Node("y")
-# x.next = y
-# linked_list_values(x) # -> [ 'x', 'y' ]
+2.
+x = Node("x")
+y = Node("y")
+x.next = y
+print (linked_list_values(x)) # -> [ 'x', 'y' ]
 
-# 3.
-# q = Node("q")
-# linked_list_values(q) # -> [ 'q' ]
+3.
+q = Node("q")
+print (linked_list_values(q)) # -> [ 'q' ]
 
-# 4.
-# linked_list_values(None) # -> [ ]
+4.
+print(linked_list_values(None)) # -> [ ]
